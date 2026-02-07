@@ -1,5 +1,5 @@
 {
-      "name": "Design personal portfolio wireframe",
+      "name": "Designpersonalportfoliowireframe",
       "version": "0.1.0",
       "private": true,
       "dependencies": {
@@ -55,6 +55,6 @@
       },
       "scripts": {
             "dev": "vite",
-            "build": "vite build"
+            "build": "npm exe vite build"
       }
 }
