@@ -3,12 +3,12 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 
 export default defineConfig({
-  base: "/", // required for Vercel
+  // Required for Vercel (root deployment)
+  base: "/",
 
   plugins: [react()],
 
   resolve: {
-    extensions: [".js", ".jsx", ".ts", ".tsx", ".json"],
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
@@ -16,12 +16,11 @@ export default defineConfig({
 
   build: {
     target: "esnext",
-    outDir: "dist", // ✅ REQUIRED
-    emptyOutDir: true,
+    outDir: "dist",      // ✅ Vercel expects this
+    emptyOutDir: true,   // ✅ clean build
   },
 
   server: {
     port: 3000,
-    open: true,
   },
 });
