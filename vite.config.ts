@@ -3,8 +3,7 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 
 export default defineConfig({
-  // Required for Vercel
-  base: "/",
+  base: "/", // required for Vercel
 
   plugins: [react()],
 
@@ -17,7 +16,7 @@ export default defineConfig({
 
   build: {
     target: "esnext",
-    outDir: "dist", // ✅ MUST be dist for Vercel
+    outDir: "dist", // ✅ REQUIRED
     emptyOutDir: true,
   },
 
